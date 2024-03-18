@@ -1,5 +1,5 @@
 #!/bin/bash
-WEBSITE="http://3.85.147.17:8080/testenv/"  # Replace with the URL you want to check
+WEBSITE="http://54.156.75.190:8080/testenv/"  # Replace with the URL you want to check
 
 # Make a request to the website and retrieve the HTTP status code
 HTTP_STATUS=$(curl -Is "$WEBSITE" | head -1 | cut -d' ' -f2)
