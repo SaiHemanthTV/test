@@ -1,0 +1,19 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Initialize the Chrome driver
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+# Open the website
+driver.get("http://3.85.147.17:8080/testenv/")
+
+# Check if the title of the page is as expected
+assert "Taxi Grabber" in driver.title
+
+# Find elements, interact with the page, or perform other tests...
+
+# Close the browser window
+driver.quit()
