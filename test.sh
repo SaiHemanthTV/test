@@ -6,6 +6,8 @@ HTTP_STATUS=$(curl -Is "$WEBSITE" | head -1 | cut -d' ' -f2)
 
 if [ "$HTTP_STATUS" = "200" ]; then
     echo "$WEBSITE is up!"
+    exit 1
 else
     echo "$WEBSITE is down."
+    exit 0
 fi
